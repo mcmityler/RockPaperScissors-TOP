@@ -11,9 +11,9 @@ function getComputerChoice(){
 // create function to get the users hand choice input
 function getHumanChoice(){
     // prompt the user for their input (assuming it is always valid)
-    let userInput = prompt("Pick 'rock', 'paper', or 'scissors'?")
+    let humanInput = prompt("Pick 'rock', 'paper', or 'scissors'?")
     // return the hand the user chose
-    return userInput
+    return humanInput
 }
 
 function playRound(m_humanChoice, m_computerChoice){
@@ -61,9 +61,11 @@ let humanScore = 0;
 let computerScore = 0;
 
 
+//run 5 rounds of the game
 for (let i = 0; i < 5; i++) {
     playRound(getHumanChoice(), getComputerChoice());
 }
 
+//Tell the user who won & what the final score was
 console.log ( (humanScore > computerScore) ? "You Won!" : computerScore > humanScore ? "You lose! :(" : "Tie Game!" );
 console.log ( "You had " + humanScore + " points and the computer had " + computerScore + " points.");
