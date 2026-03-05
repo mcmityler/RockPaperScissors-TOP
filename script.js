@@ -8,4 +8,16 @@ function getComputerChoice(){
     (randomNum === 2) ? "paper" : "scissors";
 }
 
-console.log(getComputerChoice());
+// create function to get the users hand choice input
+function getHumanChoice(){
+    // prompt the user for their input (assuming it is always valid)
+    let userInput = prompt("Pick 'rock', 'paper', or 'scissors'?")
+    // return the hand the user chose
+    return userInput
+}
+
+
+let consoleChoice = getComputerChoice();
+let userChoice = getHumanChoice();
+
+console.log(userChoice);
