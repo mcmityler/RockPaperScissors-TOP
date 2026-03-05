@@ -16,8 +16,54 @@ function getHumanChoice(){
     return userInput
 }
 
+function playRound(m_humanChoice, m_computerChoice){
+    if(m_computerChoice === m_humanChoice.toLowerCase()){
+        //tie game
+        console.log("Tie Game! You both chose " + m_computerChoice);
+    }
+    else if(m_humanChoice.toLowerCase() === "rock" && m_computerChoice === "paper"){
+        // human loses]
+        computerScore++;
+        console.log("You lose! Paper beats Rock!");
+    }
+    else if(m_humanChoice.toLowerCase() === "rock" && m_computerChoice === "scissors"){
+        // human wins
+        humanScore++;
+        console.log("You win! Rock beats Scissors!");
+    }
+    else if(m_humanChoice.toLowerCase() === "paper" && m_computerChoice === "scissors"){
+        // human loses
+        computerScore++;
+        console.log("You lose! Scissors beats Paper!");
+    }
+    else if(m_humanChoice.toLowerCase() === "paper" && m_computerChoice === "rock"){
+        // human wins
+        humanScore++;
+        console.log("You win! Paper beats Rock!");
+    }
+     else if(m_humanChoice.toLowerCase() === "scissors" && m_computerChoice === "rock"){
+        // human loses
+        computerScore++;
+        console.log("You lose! Rock beats Scissors!");
+    }
+     else if(m_humanChoice.toLowerCase() === "scissors" && m_computerChoice === "paper"){
+        // human wins
+        humanScore++;
+        console.log("You win! Scissors beats Paper!");
+    }
+    else{
+        console.log("something went wrong");
+    }
+}
 
-let consoleChoice = getComputerChoice();
-let userChoice = getHumanChoice();
+//score for game
+let humanScore = 0; 
+let computerScore = 0;
 
-console.log(userChoice);
+
+for (let i = 0; i < 5; i++) {
+    playRound(getHumanChoice(), getComputerChoice());
+}
+
+console.log ( (humanScore > computerScore) ? "You Won!" : computerScore > humanScore ? "You lose! :(" : "Tie Game!" );
+console.log ( "You had " + humanScore + " points and the computer had " + computerScore + " points.");
