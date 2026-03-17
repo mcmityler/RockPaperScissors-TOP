@@ -58,6 +58,7 @@ function playRound(m_humanChoice, m_computerChoice){
 
     if(humanScore >= 5 || computerScore >= 5){
         gameOutput.innerText = ((humanScore > computerScore) ? "You Won!" : computerScore > humanScore ? "You lose! :(" : "Tie Game!");
+        gameOutput.setAttribute("style", ((humanScore > computerScore) ? "color: green;" : computerScore > humanScore ? "color: red;" : "color: yellow;"))
     }
 }
 
