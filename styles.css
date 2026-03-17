@@ -1,0 +1,14 @@
+*{
+    outline: solid 1px red;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #547792;
+
+}
+.game{
+    background-color: #EFD2B0;
+}
