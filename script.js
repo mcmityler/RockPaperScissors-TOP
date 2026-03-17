@@ -54,7 +54,7 @@ function playRound(m_humanChoice, m_computerChoice){
     else{
         roundOutput.innerText = ("something went wrong");
     }
-    scoreOutput.innerText = `Computer: ${computerScore} -- You: ${humanScore}`;
+    scoreOutput.innerText = `You - ${humanScore} | ${computerScore} - Computer `;
 
     if(humanScore >= 5 || computerScore >= 5){
         gameOutput.innerText = ((humanScore > computerScore) ? "You Won!" : computerScore > humanScore ? "You lose! :(" : "Tie Game!");

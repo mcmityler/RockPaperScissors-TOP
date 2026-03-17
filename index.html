@@ -9,14 +9,31 @@
 </head>
 <body>
     <div class="game">
-        <div class="seletions">
-            <button class="rock">Rock</button>
-            <button class="paper">Paper</button>
-            <button class="scissors">Scissors</button>
+        <div class="selections">
+            <button class="rock choice">
+                <div>
+                    <img src="./rock-icon.png" alt="Image of a rock" />
+                    <p>Rock</p>
+                </div>
+            </button>
+            <button class="paper choice">
+                <div>
+                    <img src="./rock-icon.png" alt="Image of paper" />
+                    <p>Paper</p>
+                </div>
+            </button>
+            <button class="scissors choice">
+                <div>
+                    <img src="./rock-icon.png" alt="Image of scissors" />
+                    <p>Scissors</p>
+                </div>
+            </button>
         </div>
-        <p class="roundOutput">Round Results</p>
-        <p class="scoreOutput">Score</p>
-        <p class="gameOutput">Game Results</p>
+        <div class="outputs">
+            <p class="roundOutput text">Round Results</p>
+            <p class="scoreOutput text">Score</p>
+            <p class="gameOutput text">First to 5 points wins!</p>
+        </div>
     </div>
     <script src="./script.js"></script>
 </body>
